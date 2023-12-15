@@ -1,0 +1,20 @@
+Gerenciamento de produtos
+- Criar
+    -- Capturar dados (id, nome, preco, quantidade, tipo)
+    -- Autenticar dados.
+    -- Caso os dados estejam corretos, salvar.
+
+- Deletar
+    -- Capturar (id, nome, preco, quantidade, tipo).
+    -- Atenticar dados.
+    -- Caso os dados estejam corretos, deletar o conjunto de dados.
+
+- Atualizar
+    -- Capturar (id do produto, novo_nome, novo_preco, nova_quantidade, novo_tipo).
+    -- Autenticar dados.
+    -- Caos os dados estejam corretos, atualizar dados.
+
+- Acessar
+    -- Capturar (id do produto).
+    -- Autenticar dados.
+    -- Caso os dados estejam corretos retornar dados (nome, preco, tipo).
