@@ -37,4 +37,12 @@
 - Componentes
 - Funcionalidades
 
+### Definição da arquitetura do projeto
+
+### Projeto
+- Project Manager
+    - Escolhemos o <a href="https://python-poetry.org/"><b>poetry</b></a> pois a gestão de dependências no Python se torna mais simplificada e estruturada. O project manager coordena a seleção, atualização e compatibilidade das dependências necessárias, garantindo a estabilidade e funcionalidade do ambiente de desenvolvimento.
+- Modularização
+- Automatização de comandos
+
 ### Design de codigo
