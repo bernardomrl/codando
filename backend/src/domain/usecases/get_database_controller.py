@@ -1,17 +1,11 @@
-from domain.services import ConnectDatabaseFactory, DatabaseController
+from domain.services.factories import DatabaseConnectionFactory
+from domain.services.controllers import DatabaseController
 from domain.models import DatabaseSettings
 
 class GetDatabaseController:
-    def __init__(self, connect_database_factory: ConnectDatabaseFactory):
-        self.connect_database_factory = connect_database_factory
-    
-    # Fluxo de execução
-    def execute(self, database_settings: DatabaseSettings) -> DatabaseController:
-        # database_connection_factory retorna uma database_controller_factory
+    def __init__(self, database_connection_factory: DatabaseConnectionFactory):
+        self.database_connection_factory = database_connection_factory
+
+    def call(self, database_settings: DatabaseSettings) -> DatabaseController:
         database_controller_factory = self.database_connection_factory.call(database_settings)
-
-        # database_controller_factory retorna uma database_controller.
-        database_controller = database_controller_factory.call()
-
-        # O intuito dessa usecase é pegar o database_controller, por isso estamos retornando o mesmo.
-        return database_controller 
+        return database_controller_factory.call()

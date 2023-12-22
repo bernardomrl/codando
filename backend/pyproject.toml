@@ -6,7 +6,8 @@ authors = ["Bernardo Meirelles <bernardomrl@icloud.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = "^3.10"
+psycopg = "^3.1.16"
 
 
 [build-system]

@@ -1,6 +1,6 @@
+from domain.services.factories import DatabaseControllerFactory
 from domain.models import DatabaseSettings
-from domain.services import DatabaseControllerFactory
 
-class ConnectDatabaseFactory:
+class DatabaseConnectionFactory:
     def call(self, database_settings: DatabaseSettings) -> DatabaseControllerFactory:
         raise NotImplementedError()
