@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Product manager',
-  description: 'Product manager'
+  title: 'Projeto Codando',
+  description: 'Projeto Codando'
 };
 
 const buttons = [
@@ -27,10 +27,7 @@ const buttons = [
 
 export default function Index() {
   return (
-    <main className="h-screen w-full flex flex-col justify-center items-center space-y-8">
-      <h1 className="text-xl font-bold font-poppins leading-none">
-        Product Manager
-      </h1>
+    <main className="h-screen w-full flex flex-col justify-center items-center space-y-8  p-8">
       <div className="flex flex-col justify-center items-center space-y-4 w-full max-w-xs">
         {buttons.map((item, index) => (
           <Link
