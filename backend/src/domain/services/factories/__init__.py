@@ -1,3 +1,0 @@
-from domain.services.factories.database_controller_factory import DatabaseControllerFactory
-from backend.src.domain.services.factories.database_connection_factory import ConnectDatabaseFactory
-from domain.services.factories.produto_factory import ProdutoFactory
