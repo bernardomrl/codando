@@ -1,0 +1,1 @@
+from infraestructure.core_dependency_injection_factories.core_dependency_injection_factory_json import CoreDependencyInjectionFactoryJson

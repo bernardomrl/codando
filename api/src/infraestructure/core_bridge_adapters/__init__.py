@@ -1,0 +1,1 @@
+from infraestructure.core_bridge_adapters.core_bridge_adapter import CoreBridgeAdapter
