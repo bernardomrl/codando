@@ -5,11 +5,13 @@ from domain.models import Injection
 class GetInjection:
     def __init__(
         self,
-        core_dependency_injection_factory: CoreDependencyInjectionFactory,
         core_bridge: CoreBridge,
+        core_dependency_injection_factory: CoreDependencyInjectionFactory,
     ) -> None:
-        self.core_dependency_injection_factory = core_dependency_injection_factory
         self.core_bridge = core_bridge
+        self.core_dependency_injection_factory = ( 
+            core_dependency_injection_factory
+        )
 
     def call(self) -> Injection:
         dependency_injection = self.core_dependency_injection_factory.call()

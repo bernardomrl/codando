@@ -1,0 +1,1 @@
+from domain.groups.product_group import product_group

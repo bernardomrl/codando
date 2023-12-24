@@ -11,5 +11,8 @@ class ProductRepository:
     def update_product(self, product: Product, database_controller: DatabaseController):
         raise NotImplementedError()
     
-    def get_all_products(self, database_controller: DatabaseController):
+    def get_product(self, name: str, database_controller: DatabaseController) -> Product:
+        raise NotImplementedError()
+    
+    def get_all_products(self, database_controller: DatabaseController) -> list[str]:
         raise NotImplementedError()

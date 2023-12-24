@@ -5,7 +5,7 @@ from domain.models import Product
 class ProductRepositoryPostgres(ProductRepository):
     def create_product(self, product: Product, database_controller: DatabaseController):
         try:
-            product = database_controller.execute("INSERT INTO products VALUES(%s, %s, %s, %s)", (product.name, product.desc, product.quantity, product.price))
+            product = database_controller.execute("INSERT INTO products VALUES(%s, %s, %s, %s)", (product, ))
             return f"Product created, {Product(Product)}."
         except Exception as e:
             raise Exception(f"Error creating product, {e}.")
@@ -24,9 +24,9 @@ class ProductRepositoryPostgres(ProductRepository):
         except Exception as e:
             raise Exception(f"Error deleting product, {e}.")
 
-    def get_all_products(self, database_controller: DatabaseController):
+    def get_all_products(self, database_controller: DatabaseController) -> Product:
         try:
-            products = database_controller.execute("SELECT * FROM products", ())
-            return Product(**products)
+            products = database_controller.execute("SELECT * FROM products")
+            return [Product(**product_data) for product_data in products]
         except Exception as e:
             raise Exception(f"Error getting all products, {e}.")
